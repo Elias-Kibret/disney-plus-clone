@@ -1,0 +1,43 @@
+{
+  "files": {
+    "main.css": "/static/css/main.27e2e14d.chunk.css",
+    "main.js": "/static/js/main.7351956e.chunk.js",
+    "main.js.map": "/static/js/main.7351956e.chunk.js.map",
+    "runtime-main.js": "/static/js/runtime-main.8cb30087.js",
+    "runtime-main.js.map": "/static/js/runtime-main.8cb30087.js.map",
+    "static/css/2.19627560.chunk.css": "/static/css/2.19627560.chunk.css",
+    "static/js/2.04688966.chunk.js": "/static/js/2.04688966.chunk.js",
+    "static/js/2.04688966.chunk.js.map": "/static/js/2.04688966.chunk.js.map",
+    "index.html": "/index.html",
+    "static/css/2.19627560.chunk.css.map": "/static/css/2.19627560.chunk.css.map",
+    "static/css/main.27e2e14d.chunk.css.map": "/static/css/main.27e2e14d.chunk.css.map",
+    "static/js/2.04688966.chunk.js.LICENSE.txt": "/static/js/2.04688966.chunk.js.LICENSE.txt",
+    "static/media/IMG_leipuk.2476660c.jpg": "/static/media/IMG_leipuk.2476660c.jpg",
+    "static/media/cta-logo-one.1e2a5ccb.svg": "/static/media/cta-logo-one.1e2a5ccb.svg",
+    "static/media/cta-logo-two.e69ae552.png": "/static/media/cta-logo-two.e69ae552.png",
+    "static/media/home-background.a0c4bdd9.png": "/static/media/home-background.a0c4bdd9.png",
+    "static/media/home-icon.b6a11f9b.svg": "/static/media/home-icon.b6a11f9b.svg",
+    "static/media/login-background.05b1a1b3.jpg": "/static/media/login-background.05b1a1b3.jpg",
+    "static/media/logo.8205aae8.svg": "/static/media/logo.8205aae8.svg",
+    "static/media/movie-icon.1a6f6ada.svg": "/static/media/movie-icon.1a6f6ada.svg",
+    "static/media/original-icon.d7752d89.svg": "/static/media/original-icon.d7752d89.svg",
+    "static/media/search-icon.46aff20f.svg": "/static/media/search-icon.46aff20f.svg",
+    "static/media/series-icon.4d410db6.svg": "/static/media/series-icon.4d410db6.svg",
+    "static/media/slick-theme.css": "/static/media/slick.c94f7671.ttf",
+    "static/media/slider-badag.36599446.jpg": "/static/media/slider-badag.36599446.jpg",
+    "static/media/slider-badging.b33dd5b6.jpg": "/static/media/slider-badging.b33dd5b6.jpg",
+    "static/media/slider-scale.172c6ead.jpg": "/static/media/slider-scale.172c6ead.jpg",
+    "static/media/slider-scales.f921e314.jpg": "/static/media/slider-scales.f921e314.jpg",
+    "static/media/viewers-disney.eb5bab59.png": "/static/media/viewers-disney.eb5bab59.png",
+    "static/media/viewers-national.df4c8fad.png": "/static/media/viewers-national.df4c8fad.png",
+    "static/media/viewers-starwars.3fb2e20c.png": "/static/media/viewers-starwars.3fb2e20c.png",
+    "static/media/watchlist-icon.0b5a945b.svg": "/static/media/watchlist-icon.0b5a945b.svg"
+  },
+  "entrypoints": [
+    "static/js/runtime-main.8cb30087.js",
+    "static/css/2.19627560.chunk.css",
+    "static/js/2.04688966.chunk.js",
+    "static/css/main.27e2e14d.chunk.css",
+    "static/js/main.7351956e.chunk.js"
+  ]
+}
