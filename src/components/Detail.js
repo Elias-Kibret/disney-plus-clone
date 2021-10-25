@@ -1,47 +1,85 @@
-import React from 'react'
+import React,{useEffect ,useState} from 'react'
+import db from "../firebase"
 import styled from 'styled-components'
+import { useParams } from 'react-router-dom'
 import playWhite from "../images/play-icon-white.png"
 import playBlack   from "../images/play-icon-black.png"
 import group from "../images/group-icon.png"
-function Detail() {
-    return (
-        <Container>
-            <Background>
-                <img src="https://prod-ripcut-delivery.disney-plus.net/v1/variant/disney/4F39B7E16726ECF419DD7C49E011DD95099AA20A962B0B10AA1881A70661CE45/scale?width=1440&aspectRatio=1.78&format=jpeg"/>
-            </Background>
-            <ImageTitle>
-                <img src="https://prod-ripcut-delivery.disney-plus.net/v1/variant/disney/D7AEE1F05D10FC37C873176AAA26F777FC1B71E7A6563F36C6B1B497CAB1CEC2/scale?width=1440&aspectRatio=1.78"/>
-                
-</ImageTitle>
-            <Control>
-             <PlayButton>
-               <img src={playBlack}/>
-               <span>PLAY</span>
-             </PlayButton>
-             <TrailerButton>
-             <img src={playWhite}/>
-                   <span>Trailer</span>
-             </TrailerButton>
-             <AddButton>
-               <span>+</span>
-             </AddButton>
-             <GroupWatchButton>
-              <img src={group}/>
-             </GroupWatchButton>
-            </Control>
-<SubTitle>
-    <span>
 
-    2018 - 7m - Family,Fantasy ,Kids ,Animation
-    </span>
-</SubTitle>
-<Description>
-    <span>
-        A Chibes mom who's sad when her grown son leaves home gets another
-        chance at motherhood when one of her dumplings springs to life.
-        But she finds that nothing stays cute and small forever
-    </span>
-</Description>
+import { setMovies } from '../features/movie/movieSlice'
+function Detail() {
+    const {id}=useParams();
+    const [movie , setMovie]=useState()
+    console.log("check",movie);
+
+    useEffect(()=>{
+    //Grab the movie info fromDB
+    db.collection("Movies")
+    .doc(id)
+    .get()
+    .then((doc)=>{
+        if(doc.exists){
+            
+             let check=doc.data();
+            setMovie(check);
+        }
+        else{
+            //direct to home page
+        }
+    })
+    } ,[]);
+    // 
+    return (
+
+        <Container>
+            {movie && (
+<>
+<Background>
+        <img src={movie.BackgroundImage}/>
+    </Background>
+            
+       <ImageTitle>
+                    
+                                         
+                                         
+           <img src="https://prod-ripcut-delivery.disney-plus.net/v1/variant/disney/D7AEE1F05D10FC37C873176AAA26F777FC1B71E7A6563F36C6B1B497CAB1CEC2/scale?width=1440&aspectRatio=1.78"/>
+                
+                                </ImageTitle>
+                            <Control>
+                             <PlayButton>
+                               <img src={playBlack}/>
+                               <span>PLAY</span>
+                             </PlayButton>
+                             <TrailerButton>
+                             <img src={playWhite}/>
+                                   <span>Trailer</span>
+                             </TrailerButton>
+                             <AddButton>
+                               <span>+</span>
+                             </AddButton>
+                             <GroupWatchButton>
+                              <img src={group}/>
+                             </GroupWatchButton>
+                            </Control>
+                <SubTitle>
+                    <span>
+
+                    2018 - 7m - Family,Fantasy ,Kids ,Animation
+                    </span>
+                </SubTitle>
+                <Description>
+                    <span>
+                        A Chibes mom who's sad when her grown son leaves home gets another
+                        chance at motherhood when one of her dumplings springs to life.
+                        But she finds that nothing stays cute and small forever
+                    </span>
+                </Description>
+</>
+            )}
+            
+                    
+            
+            
         </Container>
     )
 }
@@ -53,21 +91,27 @@ padding: 0 calc(3.5vw + 5px);
 position: relative;
 `
 const Background=styled.div`
+margin-top:70px;
+width:100vw;
+height: 100vh;
 position: fixed;
 left:0;
 right: 0;
 top:0;
 bottom:0;
-object-fit: cover;
 opacity: 0.8;
 z-index:-1;
-
-
+img{
+    
+    width:100%;
+    height:100%;
+    object-fit: cover;
+}
 `
 const ImageTitle=styled.div`
 height:30vh;
 width:35vw;
-margin-top:30px;
+margin-top:80px;
 img{
     width:100%;
     height: 100%;
